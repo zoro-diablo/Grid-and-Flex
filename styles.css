@@ -1,0 +1,88 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(white,black);
+}
+
+.container{
+    height: 100%;
+    padding: 10px;
+    flex:1 1 80%;
+}
+
+.main-box{
+    height:100%;
+    /* border: 2px solid; */
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(6,1fr);
+    display: grid;
+    grid-gap: 10px;
+
+}
+
+.box{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all .5s ease-in;
+}
+
+.box:nth-child(1){
+    grid-row: span 3;
+    grid-column: span 2;
+    background: url('images/img1.jpg') no-repeat center center/ cover;
+    
+}
+.box:nth-child(2){
+    grid-column: span 3;
+    grid-row: span 2;
+    background: url('images/img2.jpg') no-repeat center center/ cover;
+}
+.box:nth-child(3){
+    grid-column: span 1;
+    grid-row: span 1;
+    background: url('images/img4.jpg') no-repeat center center/ cover;
+}
+.box:nth-child(4){
+    grid-column: span 2;
+    grid-row: span 3;
+    background: url('images/img3.jpg') no-repeat center center/ cover;
+}
+.box:nth-child(5){
+    grid-column: span 3;
+    grid-row: span 3;
+    background: url('images/img5.jpg') no-repeat center center/ cover;
+}
+.box:nth-child(6){
+    grid-column: span 2;
+    grid-row: span 1;
+    background: url('images/img6.jpg') no-repeat center center/ cover;
+}
+
+h3{
+    display: none;
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box:hover h3{
+    display: block;
+}
+
+.box:hover{
+    transform: scale(1.02);
+}
+
